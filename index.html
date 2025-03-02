@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+    <title>To-Do List</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Jost', sans-serif;
+        }
+        .header_image {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.4);
+            display: block;
+        }
+        .container {
+            position: absolute;
+            right: 32px;
+            top: 33px;
+            font-size: 24px;
+        }
+        .menu-link {
+            color: #c4c4c4;
+            text-decoration: none;
+            margin-left: 10px;
+            font-family: 'Jost', sans-serif;
+        }
+        .menu-link:hover {
+            color: #9a9a9a;
+        }
+        .button:hover {
+            color: #9a9a9a;
+        }
+        .logo{
+            position: absolute;
+            left: 32px;
+            top: 16px;
+            width: 150px;
+            height: 50px;
+            object-fit: contain;
+        }
+        .headline {
+            position: absolute;
+            left: 35px;
+            top: 200px;
+            color: #c4c4c4;
+            font-size: 80px;
+            width: 20px;
+            font-family: 'Jost', sans-serif;
+        }
+        .textline {
+            position: absolute;
+            left: 35px;
+            top: 320px;
+            color: #c4c4c4;
+            font-size: 50px;
+            font-family: 'Jost', sans-serif;
+            width: 280px;
+        }
+        .description-section {
+            position: absolute;
+            background-color: #171717;
+            font-family: 'Jost', sans-serif;
+            color: #c4c4c4;
+            font-size: 30px;
+            left: 35px;
+        }
+        .button {
+            background-color: #b04300;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .dot {
+            color: #b04300;
+        }
+        .background {
+            background-color: #171717;
+            height: 851px;
+            padding: 30px 100px;
+        }
+        .list {
+            position: absolute;
+            left: 5px;
+            top: 1140px;
+            color: #c4c4c4;
+            font-size: 20px;
+            list-style-type: none;
+        }
+        .input {
+            position: absolute;
+            left: 35px;
+            top: 1050px;
+            width: 100px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .button2 {
+            background-color: #b04300;
+            border: none;
+            color: #c4c4c4;
+            padding: 4px;
+            border-radius: 6px;
+            width: 150px;
+            height: 54px;
+            object-fit: cover;
+            position: absolute;
+            left: 215px;
+            top: 17px;
+            font-size: 20px;
+            font-family: 'Jost', bold;
+        }
+        .input2 {
+            position: absolute;
+            top: 16px;
+            left: 2px;
+            width: 200px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #c4c4c4;
+            color: #333333;
+            font-size: 18px;
+            font-family: 'Jost', bold;
+            border: 1px solid #333333;
+        }
+        ::placeholder {
+            color: rgba(176, 67, 0, 0.6);
+        }
+        .button2:hover {
+            color: #9a9a9a;
+        }
+    </style>
+</head>
+<body onload="loadTodos()">
+<script>
+    function addTodo() {
+        const todoField = document.getElementById("todoField");
+        const todoList = document.getElementById("todoList");
+        if (todoField.value.trim() !== "") {
+            const todoItem = document.createElement("li");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.onclick = function() { removeTodo(todoItem); };
+            todoItem.appendChild(checkbox);
+            todoItem.appendChild(document.createTextNode(todoField.value));
+            todoList.appendChild(todoItem);
+            saveTodos();
+            todoField.value = "";
+        }
+    }
+
+    function saveTodos() {
+        const todoList = document.getElementById("todoList");
+        localStorage.setItem("todos", todoList.innerHTML);
+    }
+
+    function loadTodos() {
+        const todoList = document.getElementById("todoList");
+        const savedTodos = localStorage.getItem("todos");
+        if (savedTodos && savedTodos.trim() !== "") {
+            todoList.innerHTML = savedTodos;
+            todoList.querySelectorAll("input[type=checkbox]").forEach(checkbox => {
+                checkbox.onclick = function() { removeTodo(checkbox.parentElement); };
+            });
+        }
+    }
+
+    function removeTodo(todoItem) {
+        todoItem.remove();
+        saveTodos();
+    }
+</script>
+
+<img src="public/header-image.jpg" class="header_image"/>
+<div class="container">
+    <a class="menu-link button" href="#programm">Programm</a>
+</div>
+<img class="logo" src="public/Screenshot 2025-03-01 095639-Photoroom.png"/>
+<h1 class="headline">Noted<span class="dot">.</span></h1>
+<h2 class="textline">Dein To-Do Listen Programm.</h2>
+<h5 class="description-section" id="programm">Deine To-Do Liste:</h5>
+<div class="input">
+    <input class="input2" id="todoField" placeholder="Neue To-Do">
+    <button class="button2" onclick="addTodo()">Hinzufügen</button>
+</div>
+<ul id="todoList" class="list"></ul>
+<div class="background"></div>
+</body>
+</html>
