@@ -1,7 +1,7 @@
 let count2 = 0
 const checkSound = new Audio("public/124900__greencouch__beeps-18.wav");
 const addSound = new Audio("public/654251__strechy__item-pickup-sound.ogg");
-const playSound = new Audio("public/534017__robinhood76__09569-trumpets-ta-da-fanfare.wav");
+const playSound = new Audio("public/443449__citrus_audio__trumpets2.wav");
 
 function addDate() {
     const dayMap = {
