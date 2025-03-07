@@ -6,14 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="public/style.css">
+    <title>Noted.</title>
     <script src="src/main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body onload="loadTodos()">
 <script>
-
 
 </script>
 
@@ -29,11 +31,24 @@
 <h5 class="description-section" id="programm">Deine To-Do Liste:</h5>
 <div class="change">
 <div class="input">
-    <input class="input2" id="todoField" placeholder="Neue To-Do">
-    <button id="todoButton" class="button2" onclick="addDate()">Hinzufügen</button>
-</div>
-<input class="input3" id="date" placeholder="Wochentag">
-</div>
+    <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input id="todoField" class="mdl-textfield__input" type="text">
+            <label class="mdl-textfield__label" for="todoField">Neue ToDo...</label>
+        </div>
+    </form>
+    <button id="todoButton" class="mdl-button mdl-js-button mdl-button--fab">
+        <i class="material-icons" onclick="addDate()">add</i>
+    </button></div>
+    <select class="input3" id="date">
+        <option class = "input4" value="Montag">Montag</option>
+        <option class = "input4" value="Dienstag">Dienstag</option>
+        <option class = "input4" value="Mittwoch">Mittwoch</option>
+        <option class = "input4" value="Donnerstag">Donnerstag</option>
+        <option class = "input4" value="Freitag">Freitag</option>
+        <option class = "input4" value="Samstag">Samstag</option>
+        <option class = "input4" value="Sonntag">Sonntag</option>
+    </select>
 
 <ul id="todoList" class="list"></ul>
 <h1 class="background"> </h1>
@@ -45,6 +60,10 @@
     <ul class="tag" id="freitag">Freitag</ul>
     <ul class="tag" id="samstag">Samstag</ul>
     <ul class="tag" id="sonntag">Sonntag</ul>
+</div>
+<div class="counter10">
+    <h5>Gesamt erledigt:</h5>
+    <p id="counter2" class="counter11">0</p>
 </div>
 </body>
 </html>

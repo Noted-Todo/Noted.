@@ -1,0 +1,299 @@
+html {
+    background-color: #171717;
+    font-family: "Jost", sans-serif;
+}
+body {
+    margin: auto;
+    max-width: 100%;
+    font-family: 'Jost', sans-serif;
+}
+.header_image {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+    display: block;
+}
+.container {
+    position: absolute;
+    right: 32px;
+    top: 33px;
+    font-size: 24px;
+}
+.menu-link {
+    color: #c4c4c4;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: 'Jost', sans-serif;
+}
+.menu-link:hover {
+    color: #9a9a9a;
+}
+.button:hover {
+    color: #9a9a9a;
+}
+.logo{
+    position: absolute;
+    left: 32px;
+    top: 16px;
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+.headline {
+    position: absolute;
+    left: 35px;
+    top: 100px;
+    color: #c4c4c4;
+    font-size: 80px;
+    width: 20px;
+    font-family: 'Jost', sans-serif;
+}
+.textline {
+    position: absolute;
+    left: 35px;
+    top: 220px;
+    color: #c4c4c4;
+    font-size: 50px;
+    font-family: 'Jost', sans-serif;
+}
+.description-section {
+    position: absolute;
+    background-color: #171717;
+    font-family: 'Jost', sans-serif;
+    color: #c4c4c4;
+    font-size: 30px;
+    left: 35px;
+}
+.button {
+    background-color: #b04300;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dot {
+    color: #b04300;
+}
+.background {
+    background-color: #171717;
+    height: 851px;
+    padding: 30px 100px;
+    margin: 0px;
+}
+.list {
+    position: absolute;
+    left: 5px;
+    top: 1140px;
+    color: #c4c4c4;
+    font-size: 20px;
+    list-style-type: none;
+}
+.input {
+    position: absolute;
+    left: 35px;
+    top: 600px;
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+}
+.button2 {
+    background-color: #b04300;
+    border: none;
+    color: #c4c4c4;
+    border-radius: 100px;
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+    position: absolute;
+    left: 327px;
+    top: 17px;
+    font-size: 25px;
+    font-family: 'Jost', bold;
+}
+.mdl-textfield__input {
+    background-color: transparent !important;
+    border-bottom: 2px solid #b04300 !important;
+    color: #c4c4c4 !important;
+    font-size: 20px !important;
+    width: 200px !important;
+}
+.mdl-textfield__label {
+    color: #c4c4c4 !important;
+    width: 200px !important;
+}
+.mdl-textfield.is-focused .mdl-textfield__input {
+    border-bottom: 2px solid #b04300 !important;
+    animation: none;
+}
+.button2:hover {
+    cursor: pointer;
+    color: #9a9a9a;
+}
+.tabelle {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.tag {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    flex-direction: column;
+}
+.kalender {
+    display: flex;
+    gap: 0px;
+    border: none;
+    width: 1000px;
+    height: 55px;
+    object-fit: cover;
+    position: absolute;
+    left: 800px;
+    top: 600px;
+    flex-direction: column;
+}
+.tag {
+    flex: 1;
+    border-bottom: 2px solid #c4c4c4;
+    color: #c4c4c4;
+    list-style-type: none;
+    font-family: 'Jost', sans-serif;
+}
+.input3 {
+    position: absolute;
+    left: 250px;
+    top: 626px;
+    color: #c4c4c4;
+    font-size: 18px;
+    border: 2px solid #b04300;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: #171717;
+    padding-bottom: 3px;
+}
+.mdl-button {
+    background-color: #b04300 !important;
+    color: #c4c4c4 !important;
+    position: absolute;
+    top: 0px !important;
+    left: 360px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px !important;
+}
+.counter11 {
+    color: #b04300;
+    border: 2px solid #c4c4c4;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.counter10 {
+    position: absolute;
+    left: 45px;
+    top: 700px;
+    color: #c4c4c4;
+    font-size: 20px;
+}
+.prio-low {
+    border: 3px solid #00d069;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(76, 175, 80, 0.1);
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.51);
+    margin: 5px;
+}
+.prio-medium {
+    border: 3px solid #fad33f;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 159, 0, 0.1);
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.51);
+    margin: 5px;
+}
+.prio-high {
+    border: 3px solid #f6312f;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 77, 77, 0.1);
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.51);
+    margin: 5px;
+}
+.prio-keine {
+    border: 3px solid #c4c4c4;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(196, 196, 196, 0.1);
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.51);
+    margin: 5px;
+}
+.prio-keine:hover {
+    transform: scale(1.02)
+}
+.prio-medium:hover {
+    transform: scale(1.02)
+}
+.prio-high:hover {
+    transform: scale(1.02)
+}
+.prio-low:hover {
+    transform: scale(1.02)
+}
+
+
+@media (max-width: 768px) {
+    .kalender {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1150px;
+    }
+    .button2 {
+        width: 70px;
+        font-size: 10px;
+        left: 280px;
+    }
+    .input2 {
+        width: 150px;
+        left: 1px;
+    }
+    .input3 {
+        width: 100px;
+        left: 200px;
+    }
+    .counter {
+        position: absolute;
+        left: 35px;
+        top: 800px;
+        color: #c4c4c4;
+        font-size: 15px;
+    }
+    .counter2 {
+        color: #b04300;
+        border: 2px solid #b04300;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 20px;
+    }
+    .counter11 {
+        color: #b04300;
+        border: 2px solid #b04300;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 20px;
+    }
+    .counter10 {
+        position: absolute;
+        left: 200px;
+        top: 800px;
+        color: #c4c4c4;
+        font-size: 15px;
+        border: none;
+    }
+}
