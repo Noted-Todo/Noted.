@@ -1,7 +1,7 @@
 let count2 = 0
 const checkSound = new Audio("public/124900__greencouch__beeps-18.wav");
 const addSound = new Audio("public/654251__strechy__item-pickup-sound.ogg");
-const playSound = new Audio("public/565158__badoink__all-as-one-loop-150.wav");
+const playSound = new Audio("public/534017__robinhood76__09569-trumpets-ta-da-fanfare.wav");
 
 function addDate() {
     const dayMap = {
@@ -118,7 +118,7 @@ function counterincrease() {
             origin: { y: 0.6 },
         });
         playSound.play().catch(error => console.log("Audio-Fehler:", error));
-    } else if (count2 === 183) {
+    } else if (count2 === 10) {
         alert("Du bist aber Motiviert! 💪")
         confetti({
             particleCount: 1000,
