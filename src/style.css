@@ -19,6 +19,8 @@ body {
     right: 32px;
     top: 33px;
     font-size: 24px;
+    z-index: 10;
+    margin-top: 7px;
 }
 .menu-link {
     color: #c4c4c4;
@@ -36,14 +38,18 @@ body {
     position: absolute;
     left: 32px;
     top: 16px;
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
     object-fit: contain;
+    z-index: 20000;
+    background-color: #c4c4c4;
+    padding:0px;
+    border-radius: 50px;
 }
 .headline {
     position: absolute;
     left: 35px;
-    top: 100px;
+    top: 115px;
     color: #c4c4c4;
     font-size: 80px;
     width: 20px;
@@ -52,7 +58,7 @@ body {
 .textline {
     position: absolute;
     left: 35px;
-    top: 220px;
+    top: 235px;
     color: #c4c4c4;
     font-size: 50px;
     font-family: 'Jost', sans-serif;
@@ -64,11 +70,13 @@ body {
     color: #c4c4c4;
     font-size: 30px;
     left: 35px;
+    margin-top: 50px;
 }
+
 .button {
     background-color: #b04300;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 15px;
+    border-radius: 35px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .dot {
@@ -189,7 +197,7 @@ body {
     color: #c4c4c4;
     font-size: 30px;
     border: 2px solid #b04300;
-    border-radius: 15px;
+    border-radius: 25px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 10px;
@@ -252,6 +260,14 @@ body {
     background-color: #171717;
     color: #c4c4c4;
     border: 2px solid #c4c4c4;
+}
+.header {
+    background-color: #171717;
+    padding: 50px;
+    padding-left: 700px;
+    padding-right: 1500px;
+    position: absolute;
+    top: -30px;
 }
 
 @media (max-width: 768px) {
