@@ -183,19 +183,25 @@ body {
     font-size: 10px !important;
 }
 .counter11 {
-    color: #b04300;
-    border: 2px solid #c4c4c4;
-    padding: 5px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 20px;
+    position: absolute;
+    left: 40px;
+    top: 730px;
+    color: #c4c4c4;
+    font-size: 30px;
+    border: 2px solid #b04300;
+    border-radius: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .counter10 {
     position: absolute;
-    left: 45px;
-    top: 700px;
+    left: 40px;
+    top: 670px;
     color: #c4c4c4;
     font-size: 20px;
+    font-family: 'Jost', sans-serif;
 }
 .prio-low {
     border: 3px solid #00d069;
@@ -241,7 +247,12 @@ body {
 .prio-low:hover {
     transform: scale(1.02)
 }
-
+.select {
+    border-radius: 10px;
+    background-color: #171717;
+    color: #c4c4c4;
+    border: 2px solid #c4c4c4;
+}
 
 @media (max-width: 768px) {
     .kalender {
